@@ -34,6 +34,7 @@ export const lambdaHandler = async (event) => {
             body: JSON.stringify(result.Item)
         }
     }catch(error){
+        //printing error
         console.error(error);
         return {
             statusCode: 500,
