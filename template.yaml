@@ -30,7 +30,7 @@ Resources:
       Architectures:
         - x86_64
       Policies:
-        - DynamoDBCrudPolicy:
+        - DynamoDBWritePolicy:
             TableName: !Ref ProductsTable
       Events:
         CreateProduct:
@@ -47,7 +47,7 @@ Resources:
       Architectures:
         - x86_64
       Policies:
-        - DynamoDBCrudPolicy:
+        - DynamoDBReadPolicy:
             TableName: !Ref ProductsTable
       Events:
         getProducts:
@@ -64,7 +64,7 @@ Resources:
       Architectures:
         - x86_64
       Policies:
-        - DynamoDBCrudPolicy:
+        - DynamoDBReadPolicy:
             TableName: !Ref ProductsTable
       Events:
         GetProduct:
